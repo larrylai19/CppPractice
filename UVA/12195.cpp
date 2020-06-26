@@ -43,7 +43,6 @@ int main()
                 break;
             }
         }
-
         cout << ans << endl;
     }
 }
