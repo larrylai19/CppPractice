@@ -2,12 +2,12 @@
 #include <vector>
 using namespace std;
 
-void output(vector< int >& Vec) // �L�X Vector �����Ҧ������� Vector �� size
+void output(vector< int >& Vec) // 印出 Vector 內的所有元素及 Vector 的 size
 {
-    cout << "Vector ��������: ";
+    cout << "Vector 內的元素: ";
     for (size_t i = 0; i < Vec.size(); ++i)
         cout << Vec[i] << " ";
-    cout << endl << "Vector �� size : ";
+    cout << endl << "Vector 的 size : ";
     cout << Vec.size();
     if (Vec.empty())
         cout << endl << "Vector.empty() : True";
