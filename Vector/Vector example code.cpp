@@ -2,23 +2,23 @@
 #include <vector>
 using namespace std;
 
-void output(vector< int >& Vec) // ¦L¥X Vector ¤ºªº©Ò¦³¤¸¯À¤Î Vector ªº size
+void output(vector< int >& Vec) // ï¿½Lï¿½X Vector ï¿½ï¿½ï¿½ï¿½ï¿½Ò¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Vector ï¿½ï¿½ size
 {
-    cout << "Vector ¤ºªº¤¸¯À: ";
-	for (size_t i = 0; i < Vec.size(); ++i)
-		cout << Vec[i] << " ";
-    cout << endl << "Vector ªº size : ";
+    cout << "Vector ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ";
+    for (size_t i = 0; i < Vec.size(); ++i)
+        cout << Vec[i] << " ";
+    cout << endl << "Vector ï¿½ï¿½ size : ";
     cout << Vec.size();
     if (Vec.empty())
         cout << endl << "Vector.empty() : True";
     else
         cout << endl << "Vector.empty() : False";
-	cout << endl << endl;
+    cout << endl << endl;
 }
 
 int main()
 {
-	vector< int > Vec;
+    vector< int > Vec;
 
     Vec.push_back(2);
     Vec.push_back(1);
@@ -57,21 +57,21 @@ int main()
     // 0
     // True
 
-	for (int i = 1; i < 10; ++i)
-		Vec.push_back(i);
-	output(Vec);
-	// 1 2 3 4 5 6 7 8 9
-	// 9
+    for (int i = 1; i < 10; ++i)
+        Vec.push_back(i);
+    output(Vec);
+    // 1 2 3 4 5 6 7 8 9
+    // 9
     // False
 
-	cout << "Vector.front(): "<< Vec.front() << endl;
-	// 1
-	cout << "Vector.back(): " << Vec.back() << endl;
-	// 9
-	cout << "Vector[1]: " << Vec[1] << endl;
-	// 2
+    cout << "Vector.front(): "<< Vec.front() << endl;
+    // 1
+    cout << "Vector.back(): " << Vec.back() << endl;
+    // 9
+    cout << "Vector[1]: " << Vec[1] << endl;
+    // 2
     cout << "Vector.at(1): " << Vec.at(1) << endl << endl;
-	// 2
+    // 2
 
     Vec.resize(5);
     output(Vec);
