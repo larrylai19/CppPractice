@@ -37,7 +37,7 @@ void outputResult(int n, int m)
                 cout << "*";
             else
                 cout << result[i][j];
-        cout << endl;
+        cout << endl << endl;
     }
 }
 
@@ -68,7 +68,6 @@ int main()
 
         cout << "Field #" << casenum << ":" << endl;
         outputResult(n, m);
-        cout << endl;
         ++casenum;
     }
 }
