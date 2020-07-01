@@ -57,7 +57,6 @@ int main()
         for (int i = 0; i < n; ++i)
         {
             cin >> map;
-            pos = map.find('*');
 
             while ((pos = map.find('*')) != string::npos)
             {
