@@ -33,7 +33,7 @@ int main()
 	// str1: string 1string 2
 	// str2: string 2
 
-	cout << "在 str1 內從頭尋找 str2: " << str1.find(str2) << endl << endl;
+	cout << "在 str1 內尋找 str2: " << str1.find(str2) << endl << endl;
 
 	equal(str1, str2);
 	// str1 == str2: False
