@@ -19,5 +19,4 @@ int main()
 	while (in.read((char*)&test, sizeof(test)))
 		cout << test;
 	cout << endl;
-	system("pause");
 }
