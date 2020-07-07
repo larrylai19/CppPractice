@@ -1,7 +1,7 @@
 class Solution {
 public:
     int maxSubArray(vector<int>& nums) {
-        int max = nums[0]; // ¦³¥i¯à nums.size() = 1    
+        int max = nums[0]; // æœ‰å¯èƒ½ nums.size() = 1
         for(size_t i = 0; i < nums.size(); ++i)
         {
             int sum = 0;
