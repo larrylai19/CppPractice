@@ -18,7 +18,7 @@ void output(vector< int >& Vec) // 印出 Vector 內的所有元素及 Vector �
 
 int main()
 {
-    vector< int > Vec;
+    vector<int> Vec;
 
     Vec.push_back(2);
     Vec.push_back(1);
