@@ -2,20 +2,11 @@ class Solution {
 public:
     int minPathSum(vector<vector<int>>& grid) {
         int height = grid.size(), width = grid[0].size();
-        unordered_map<int, unordered_map<int, int>> dp;
-        dp[0][0] = grid[0][0];
-        for(int i = 0; i < height; ++i)
-            for(int j = 0; j < width; ++j)
-            {
-                if(!i && !j)
-                    continue;
-                int min = INT_MAX;
-                if(j - 1 >= 0)
-                    min = dp[i][j - 1] < min ? dp[i][j - 1] : min;
-                if(i - 1 >= 0)
-                    min = dp[i - 1][j] < min ? dp[i - 1][j] : min;
-                dp[i][j] = min + grid[i][j];
-            }
-        return dp[height - 1][width - 1];
+        vector<vector<int>> dp(height + 1, vector<int>(width + 1, INT_MAX));
+        dp[0][1] = 0;
+        for(int i = 1; i <= height; ++i)
+            for(int j = 1; j <= width; ++j)
+                dp[i][j] = min(dp[i][j - 1], dp[i - 1][j]) + grid[i - 1][j - 1];
+        return dp[height][width];
     }
 };
