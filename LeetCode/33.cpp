@@ -19,9 +19,9 @@ public:
                     
                         left = mid + 1;
                     else
-                        right = mid;
-                
-            else if(nums[mid] < target)
+                        right = mid;   
+            
+            if(nums[mid] < target)
                 if(nums[0] > nums[mid])
                     if(nums[0] > target)
                         left = mid + 1;
