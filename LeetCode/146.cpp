@@ -1,8 +1,9 @@
 class LRUCache {
 public:
     list<pair<int, int>> cache; // 儲存 key 及 value
-    unordered_map<int, list<pair<int, int>>::iterator> hash; // 紀錄 key 及對應的 node，方便尋找及刪除
+    unordered_map<int, list<pair<int, int>>::iterator> hash; // 儲存 key 及對應的 node，方便尋找及刪除
     int Cap;
+	
     LRUCache(int capacity) {
         Cap = capacity;
     }
