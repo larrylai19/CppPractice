@@ -30,7 +30,6 @@ public:
             cache.splice(cache.begin(), cache, it->second);
             return;
         }
-        // 如果沒找到
         // 如果 list 已經滿了
         if(cache.size() == Cap)
         {
