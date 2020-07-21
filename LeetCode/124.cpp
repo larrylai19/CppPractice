@@ -11,14 +11,14 @@
  */
 class Solution {
 public:
-    // 找出以 root 當終點的最大和
+    // 找出以 root 為起點的最大路徑和
     int maxPath(TreeNode* root)
     {
         if(!root)
             return 0;
         return max(maxPath(root->left) + root->val, max(maxPath(root->right) + root->val, 0));
     }
-    // 找出任意起點任意終點的最大和
+    // 找出任意起點任意終點的最大路徑和
     int maxPathSum(TreeNode* root) {
        if(!root) 
            return INT_MIN;
