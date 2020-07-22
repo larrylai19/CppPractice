@@ -12,9 +12,6 @@ public:
     }
     
     int numIslands(vector<vector<char>>& grid) {
-        ios_base::sync_with_stdio(false);
-        cin.tie(NULL);
-        cout.tie(NULL);
         int height = grid.size();
         if(!height)    
             return 0;
