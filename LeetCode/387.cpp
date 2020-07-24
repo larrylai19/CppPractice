@@ -1,8 +1,7 @@
 class Solution {
 public:
     int firstUniqChar(string s) {
-        int n = s.size();
-        int count[26] = {};
+        int count[26] = {}, n = s.size();
         for(auto i : s)
             ++count[i - 'a'];
         for(int i = 0; i < n; ++i)
