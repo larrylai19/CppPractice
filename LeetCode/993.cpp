@@ -20,7 +20,7 @@ public:
         auto left = get(root->left, target, ++depth, root->val);
         if(left.second != -1)
             return left;
-        return pair<int, int>(get(root->right, target, depth, root->val));
+        return get(root->right, target, depth, root->val);
     }
     bool isCousins(TreeNode* root, int x, int y) {
         auto xInfo = get(root, x, 0, root->val);
