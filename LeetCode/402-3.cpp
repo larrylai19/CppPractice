@@ -12,9 +12,7 @@ public:
             if(index || i != '0')
                 num[index++] = i;
         }
-        while(k--)
-            --index;
-        num.resize(index);
+        num.resize(index - k);
         return num.empty() ? "0" : num;
     }
 };
