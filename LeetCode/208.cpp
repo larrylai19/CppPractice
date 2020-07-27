@@ -8,6 +8,11 @@ public:
         for(auto& p : child)
             p = nullptr;
     }
+    ~node()
+    {
+        for(auto& p : child)
+            delete p;
+    }
 };
 
 class Trie {
