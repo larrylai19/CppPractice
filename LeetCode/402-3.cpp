@@ -4,15 +4,15 @@ public:
         int n = num.size();
         if(n == k)
             return "0";
-        int digits = n - k, index = 0;
+        int digits = n - k, size = 0;
         for(auto i : num)
         {
-            while(k && index && num[index - 1] > i)
-                --index, --k;
-            if(index || i != '0')
-                num[index++] = i;
+            while(k && size && num[size - 1] > i)
+                --size, --k;
+            if(size || i != '0')
+                num[size++] = i;
         }
-        num.resize(index - k);
+        num.resize(size - k);
         return num.empty() ? "0" : num;
     }
 };
