@@ -14,7 +14,7 @@ public:
         }
         while(k--)
             --index;
-        num.erase(index);
+        num.resize(index);
         return num.empty() ? "0" : num;
     }
 };
