@@ -4,7 +4,7 @@ public:
         int n = num.size();
         if(n == k)
             return "0";
-        int digits = n - k, size = 0;
+        int size = 0;
         for(auto i : num)
         {
             while(k && size && num[size - 1] > i)

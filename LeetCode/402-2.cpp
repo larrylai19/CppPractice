@@ -4,7 +4,6 @@ public:
         int n = num.size();
         if(n == k)
             return "0";
-        int digits = n - k;
         string res;
         for(auto i : num)
         {
