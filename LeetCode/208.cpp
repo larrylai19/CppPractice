@@ -1,3 +1,12 @@
+// fast IO
+static auto __ = []()
+{
+    std::ios_base::sync_with_stdio(false);
+    std::cin.tie(nullptr);
+    std::cout.tie(nullptr);
+    return 0;
+}();
+
 class node
 {
 public:
@@ -20,6 +29,11 @@ public:
     /** Initialize your data structure here. */
     Trie() {
         root = new node();
+    }
+    
+    ~Trie()
+    {
+        delete root;
     }
     
     /** Inserts a word into the trie. */
