@@ -18,7 +18,7 @@ public:
         vector<vector<int>> v(max_x - min_x + 1);
         for(auto& m : m_)
             while(!m.second.empty())
-                v[m.first.second - min_x].push_back(m.second.top()), m.second.pop();
+                v[m.first.second - min_x].emplace_back(m.second.top()), m.second.pop();
         return v;
     }
 private:
