@@ -1,10 +1,9 @@
 class Solution {
 public:
     int titleToNumber(string s) {
-        int n = s.size(), res = 0;
+        int n = s.size() - 1, res = 0;
         for(auto c : s)
-            if(--n) res += (c - 'A' + 1) * pow(26, n);
-            else res += (c - 'A' + 1);
+            res += (c - 'A' + 1) * pow(26, n--);
         return res;
     }
 };
