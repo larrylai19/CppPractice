@@ -28,14 +28,14 @@ public:
 private:
     unordered_map<int, int> _m;
     
-    void traverse(TreeNode* root, int sum, int target, int& count)
+    void traverse(TreeNode* root, int currSum, int target, int& count)
     {
         if(!root) return;
-        sum += root->val;
-        count += _m[sum - target]; // sum - (sum - target) = target
-        ++_m[sum];
-        traverse(root->left, sum, target, count);
-        traverse(root->right, sum, target, count);
-        --_m[sum];
+        currSum += root->val;
+        count += _m[currSum - target]; // currSum - (currSum - target) = target
+        ++_m[currSum];
+        traverse(root->left, currSum, target, count);
+        traverse(root->right, currSum, target, count);
+        --_m[currSum];
     }
 };
