@@ -13,6 +13,6 @@ public:
     ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) {
         if(!l1) return l2;
         if(!l2) return l1;
-        return l1->val < l2->val ? new ListNode(l1->val, mergeTwoLists(l1 = l1->next, l2)) : new ListNode(l2->val, mergeTwoLists(l1, l2 = l2->next));
+        return l1->val < l2->val ? new ListNode(l1->val, mergeTwoLists(l1->next, l2)) : new ListNode(l2->val, mergeTwoLists(l1, l2->next));
     }
 };
