@@ -27,9 +27,9 @@ public:
 private:
     ListNode* findMid(ListNode* head)
     {
-        auto f = head, l = head;
-        while(f && f->next) f = f->next->next, l = l->next;
-        return l;
+        auto slow = head, fast = head;
+        while(fast && fast->next) fast = fast->next->next, slow = slow->next;
+        return slow;
     }
     
     ListNode* _reverse(ListNode* head)
