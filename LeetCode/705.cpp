@@ -9,24 +9,14 @@ static auto __ = []()
 class MyHashSet {
 public:
     /** Initialize your data structure here. */
-    MyHashSet() {
-        
-    }
+    MyHashSet() {}
     
-    void add(int key) {
-        if(!hs.count(key))
-            hs.insert(key);
-    }
+    void add(int key) { hs.insert(key); }
     
-    void remove(int key) {
-        if(hs.count(key))
-            hs.erase(key);
-    }
+    void remove(int key) { hs.erase(key); }
     
     /** Returns true if this set contains the specified element */
-    bool contains(int key) {
-        return hs.count(key);
-    }
+    bool contains(int key) { return hs.count(key); }
 private:
     unordered_set<int> hs;
 };
