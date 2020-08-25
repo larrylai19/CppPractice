@@ -1,5 +1,5 @@
 // fast IO
-static auto __ = []() 
+static auto __ = []()
 {
     std::ios_base::sync_with_stdio(false);
     std::cin.tie(nullptr);
