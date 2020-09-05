@@ -22,16 +22,9 @@ public:
     {
         vector<int> t1, t2, v;
         getEle(t1, root1), getEle(t2, root2);
-        int i = 0, j = 0, n1 = t1.size(), n2 = t2.size();
-        v.reserve(n1 + n2);
-        while(v.size() != n1 + n2)
-        {
-            if(i >= n1) v.emplace_back(t2[j++]);
-            else if(j >= n2) v.emplace_back(t1[i++]);
-            else v.emplace_back(t1[i] < t2[j] ? t1[i++] : t2[j++]);
-        }
-        return v;
+        return merge(t1, t2);
     }
+
 private:
     void getEle(vector<int>& v, TreeNode* root)
     {
@@ -39,5 +32,19 @@ private:
         getEle(v, root->left);
         v.emplace_back(root->val);
         getEle(v, root->right);
+    }
+    
+    vector<int> merge(vector<int>& v1, vector<int>& v2)
+    {
+        int n1 = v1.size(), n2 = v2.size();
+        vector<int> v(n1 + n2);
+        int i = 0, i1 = 0, i2 = 0;
+        while(i1 < n1 || i2 < n2)
+        {
+            if(i1 >= n1) v[i++] = v2[i2++];
+            else if(i2 >= n2) v[i++] = v1[i1++];
+            else v[i++] = v1[i1] < v2[i2] ? v1[i1++] : v2[i2++];
+        }
+        return v;
     }
 };
