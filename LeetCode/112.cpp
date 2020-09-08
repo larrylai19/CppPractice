@@ -11,10 +11,11 @@
  */
 class Solution {
 public:
-    int sumNumbers(TreeNode* root, int sum = 0) // add sum
+    bool hasPathSum(TreeNode* root, int sum, int curSum = 0) // add curSum
     {
-        if(!root) return 0;
-        sum = sum * 10 + root->val;
-        return !root->left && !root->right ? sum : sumNumbers(root->left, sum) + sumNumbers(root->right, sum);
+        if(!root) return false;
+        curSum += root->val;
+        if(!root->left && !root->right && curSum == sum) return true;
+        return hasPathSum(root->left, sum, curSum) || hasPathSum(root->right, sum, curSum);
     }
 };

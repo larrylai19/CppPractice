@@ -11,7 +11,7 @@
  */
 class Solution {
 public:
-    int sumRootToLeaf(TreeNode* root, int sum = 0)
+    int sumRootToLeaf(TreeNode* root, int sum = 0) // add sum
     {
         if(!root) return 0;
         sum = sum * 2 + root->val;
