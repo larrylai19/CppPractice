@@ -16,7 +16,7 @@ public:
         s = " " + s;
         dp[0] = 1;
         for(int i = 1; i <= n; ++i) for(int j = 0; j < i; ++j)
-            if(dp[j] && set.count(s.substr(j + 1, i - j))) dp[i] = 1;
+            if(dp[j] && set.count(s.substr(j + 1, i - j))) { dp[i] = 1; break; }
         return dp[n];
     }
 };
