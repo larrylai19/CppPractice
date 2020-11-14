@@ -9,6 +9,8 @@
 
 using namespace std;
 
+// reference: https://ppt.cc/fMYpGx
+
 static auto __ = []
 {
     ios_base::sync_with_stdio(0);
@@ -20,7 +22,7 @@ static auto __ = []
 int main()
 {
     string str;
-
+    
     while (cin >> str && str != "#")
     {
         int k;
