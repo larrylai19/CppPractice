@@ -3,7 +3,7 @@
 #include <functional>
 #include <vector>
 
-#define LOOP(n) for(int i = 0; i < n; ++i)
+#define LOOP(n) for(int I = 0; I < n; ++I)
 
 using namespace std;
 
