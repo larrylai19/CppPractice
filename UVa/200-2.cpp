@@ -30,7 +30,7 @@ int main()
     cin >> str1;
 
     int mem[26] = {}; // 1 -> 沒有小於其他字元，2 -> 有小於其他字元
-    vector<int> G[26]; // 比 A 小的字元都會被推入 G[0]，...
+    vector<int> G[26]; // 比 A 大的字元都會被推入 G[0]，...
 
     while (cin >> str2 && str2 != "#")
     {
