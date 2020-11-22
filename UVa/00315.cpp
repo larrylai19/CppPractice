@@ -56,7 +56,7 @@ int main()
         }
 
         // 如果 n 為根節點，則 child >= 2 就是割點
-        // 否則只要 n 存在一個 descendant 沒有 backedge 則 n 為割點
+        // 否則只要 n 存在一個的 child，i 的 descendant 沒有 backedge ( 即 low[i] >= dfsD[n] ) 則 n 為割點
         if (flag && (child >= 2 || parent)) ++ret;
     };
 
