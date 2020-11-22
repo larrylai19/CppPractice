@@ -28,7 +28,8 @@ int main()
     string str;
     stringstream ss;
     vector<vector<int>> G;
-    vector<int> dfsD, low;
+    vector<int> dfsD;
+    vector<int> low;
 
     // parent 為 0 表示 n 為 root
     function<void(int, int)> dfs = [&](int n, int parent)
