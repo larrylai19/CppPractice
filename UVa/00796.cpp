@@ -41,7 +41,7 @@ int main()
             dfs(i, n);
             low[n] = min(low[i], low[n]);
 
-            // 如果 low[i] 大於 dfsD[n] 表示 i 的 descendant ( 包含 i ) 沒有 backedge
+            // 如果 low[i] 大於 dfsD[n] 表示 i 及 i 的 descendant 沒有 backedge
             // 連接到 n 的 ancestor ( 包含 n )，則 ( u, v ) 為 bridge
             // 由於題目要求較小的放在前面，所以這樣存入
             if (low[i] > dfsD[n]) pq.push({ min(n, i), max(n, i) });
