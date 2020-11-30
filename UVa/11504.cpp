@@ -21,10 +21,10 @@ static auto __ = []
 }();
 
 int TIME;
-int cnt;         // 計算目前有幾個 scc
+int cnt;         // 計算目前有幾個 SCC
 vector<int> dfn;
 vector<int> low;
-vector<int> com; // 紀錄點屬於哪個 scc
+vector<int> com; // 紀錄點屬於哪個 SCC
 vector<vector<int>> G;
 unordered_set<int> inStack;
 stack<int> s;
@@ -89,10 +89,10 @@ int main()
             G[u].push_back(v);
         }
 
-        // 找出 scc ( strongly connected component )
+        // 找出 SCC ( Strongly Connected Component )
         for (int u = 1; u <= n; ++u) if (!dfn[u]) dfs(u);
 
-        // 計算 scc 被幾個其他的 scc 接入
+        // 計算 SCC 被幾個其他的 SCC 接入
         vector<int> degree(cnt);
         for (int u = 1; u <= n; ++u) for (auto& v : G[u])
         {
@@ -100,7 +100,7 @@ int main()
         }
 
         int ret = 0;
-        // 如果 scc 沒有被其他的 scc 接入則需要一次來推倒
+        // 如果 SCC 沒有被其他的 SCC 接入則需要一次來推倒
         for (auto& de : degree) if (!de) ++ret;
         cout << ret << '\n';
     }
