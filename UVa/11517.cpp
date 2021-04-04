@@ -27,7 +27,7 @@ void init()
 void read()
 {
     cin >> P >> N;
-    sum = 0; // 一種面額只能用一次，紀錄最少需要做到多少錢
+    sum = 0; // 一種面額只能用一次，紀錄最多需要做到多少錢
     for (int i = 0; i < N; ++i)
     {
         cin >> C[i];
