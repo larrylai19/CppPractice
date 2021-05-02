@@ -74,7 +74,6 @@ int maxiumFlow()
 
     while (true)
     {
-        int bottleNeck = INF;
         CLR(vis);
 
         queue<int> q;
@@ -92,8 +91,6 @@ int maxiumFlow()
                 q.push(v);
                 vis[v] = true;
                 p[v] = u;
-
-                bottleNeck = min(c[u][v] - f[u][v], bottleNeck);
             }
         }
 
