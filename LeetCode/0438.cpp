@@ -1,18 +1,19 @@
 class Solution {
 public:
     vector<int> findAnagrams(string s, string p) {
-        int ls = s.size(), lp = p.size();
-        vector<int> vs(26), vp(26), res;
-        for(auto c : p)
-            ++vp[c - 'a'];
-        for(int i = 0; i < ls; ++i)
-        {
-            if(i >= lp)
-                --vs[s[i - lp] - 'a'];
-            ++vs[s[i] - 'a'];
-            if(vs == vp)
-                res.push_back(i - lp + 1);
+        vector<int> ret;        
+        vector<int> allChar(26);
+        vector<int> currChar(26);
+        
+        for (auto& c : p) ++allChar[c - 'a'];
+        
+        int l = 0;
+        for (int i = 0; i < s.length(); ++i) {
+            ++currChar[s[i] - 'a'];
+            if (i >= p.length()) --currChar[s[l++] - 'a'];
+            if (currChar == allChar) ret.push_back(l);
         }
-        return res;
+        
+        return ret;
     }
 };

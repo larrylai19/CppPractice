@@ -14,12 +14,16 @@ public:
         auto cmp = [](ListNode* l, ListNode* r) { return l->val > r->val; };
         priority_queue<ListNode*, vector<ListNode*>, decltype(cmp)> pq(cmp);
         auto head = new ListNode(), tail = head;
-        for(auto& ptr : lists) if(ptr) pq.push(ptr);
-        while(!pq.empty())
-        {
-            tail->next = pq.top(), tail = tail->next, pq.pop();
-            if(tail->next) pq.push(tail->next);
+        
+        for (auto& ptr : lists) if (ptr) pq.push(ptr);
+        
+        while (!pq.empty()) {
+            tail->next = pq.top();
+            tail = tail->next;
+            pq.pop();
+            if (tail->next) pq.push(tail->next);
         }
+        
         return head->next;
     }
 };
